@@ -1,20 +1,55 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
+    <ion-title>{{ 'Estado Jardin' | translate }}</ion-title>
 
-    <ion-buttons end>
+  <!--  <ion-buttons end>
       <button ion-button icon-only (click)="addItem()">
         <ion-icon name="add"></ion-icon>
       </button>
-    </ion-buttons>
+    </ion-buttons>-->
   </ion-navbar>
 
 </ion-header>
 
 <ion-content>
+Usuarios Actuales test
+  <ion-item *ngFor="let user of items2">
+    <h2>{{ user.first_name }} </h2>
+   
+ </ion-item>
 
-  <ion-list>
+      <ion-card>
+          <img src="../assets/img/cloudly.jpg"  />
+          <ion-card-content>
+            <ion-card-title>
+              Temperatura Jadín 1
+              </ion-card-title>
+            <p>
+                Estado del jardín: Saludable</p>
+                <p>Último riego: 29/09/17 02:54:pm</p>
+                
+                <p>Modo de riego: automático
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+         <ion-card>
+          <img src="../assets/img/sunny.jpg"  />
+          <ion-card-content>
+            <ion-card-title>
+              Temperatura Jadín 2
+              </ion-card-title>
+            <p>
+                Estado del jardín: Saludable</p>
+                <p>Último riego: 29/09/17 02:54:pm</p>
+                
+                <p>Modo de riego: automático
+            </p>
+          </ion-card-content>
+        </ion-card>
+
+  <!--<ion-list>
     <ion-item-sliding *ngFor="let item of currentItems">
       <button ion-item (click)="openItem(item)">
         <ion-avatar item-start>
@@ -31,5 +66,6 @@
         </button>
       </ion-item-options>
     </ion-item-sliding>
-  </ion-list>
+  </ion-list>-->
+
 </ion-content>

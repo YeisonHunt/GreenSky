@@ -8,49 +8,40 @@ export class Items {
   items: Item[] = [];
 
   defaultItem: any = {
-    "name": "Burt Bear",
-    "profilePic": "assets/img/speakers/bear.jpg",
-    "about": "Burt is a Bear.",
+    "name": "Geranios",
+    "profilePic": "assets/img/plantas/plants.jpg",
+    "about": "Descripción del geranio",
   };
 
 
   constructor(public http: Http) {
     let items = [
       {
-        "name": "Burt Bear",
-        "profilePic": "assets/img/speakers/bear.jpg",
-        "about": "Burt is a Bear."
+        "name": "Suculentas",
+        "profilePic": "assets/img/plantas/suculentas.png",
+        "about": "Descripción del geranio."
       },
       {
-        "name": "Charlie Cheetah",
-        "profilePic": "assets/img/speakers/cheetah.jpg",
-        "about": "Charlie is a Cheetah."
+        "name": "Hoya",
+        "profilePic": "assets/img/plantas/hoya.jpg",
+        "about": "Descripción Hoya."
       },
       {
-        "name": "Donald Duck",
-        "profilePic": "assets/img/speakers/duck.jpg",
-        "about": "Donald is a Duck."
+        "name": "Begonia",
+        "profilePic": "assets/img/plantas/begonia.jpg",
+        "about": "Descripción Begonia."
       },
       {
-        "name": "Eva Eagle",
-        "profilePic": "assets/img/speakers/eagle.jpg",
-        "about": "Eva is an Eagle."
+        "name": "Iris",
+        "profilePic": "assets/img/plantas/iris.jpg",
+        "about": "Descripción Iris Japónica."
       },
       {
-        "name": "Ellie Elephant",
-        "profilePic": "assets/img/speakers/elephant.jpg",
-        "about": "Ellie is an Elephant."
+        "name": "Geranios",
+        "profilePic": "assets/img/plantas/geranioF.jpg",
+        "about": "Descripción Geranio."
       },
-      {
-        "name": "Molly Mouse",
-        "profilePic": "assets/img/speakers/mouse.jpg",
-        "about": "Molly is a Mouse."
-      },
-      {
-        "name": "Paul Puppy",
-        "profilePic": "assets/img/speakers/puppy.jpg",
-        "about": "Paul is a Puppy."
-      }
+     
     ];
 
     for (let item of items) {

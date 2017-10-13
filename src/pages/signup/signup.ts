@@ -15,9 +15,9 @@ export class SignupPage {
   // If you're using the username field with or without email, make
   // sure to add it to the type
   account: { name: string, email: string, password: string } = {
-    name: 'Test Human',
-    email: 'test@example.com',
-    password: 'test'
+    name: 'Yeison Caicedo',
+    email: 'yecaicedo@gmail.com',
+    password: 'trollface'
   };
 
   // Our translated text strings
@@ -43,7 +43,7 @@ export class SignupPage {
 
       // Unable to sign up
       let toast = this.toastCtrl.create({
-        message: this.signupErrorString,
+        message: 'Bienvenido(a) a GreenSky!',
         duration: 3000,
         position: 'top'
       });

@@ -32,19 +32,19 @@ export class TutorialPage {
         console.log('Loaded values', values);
         this.slides = [
           {
-            title: values.TUTORIAL_SLIDE1_TITLE,
-            description: values.TUTORIAL_SLIDE1_DESCRIPTION,
-            image: 'assets/img/ica-slidebox-img-1.png',
+            title: 'Bienvenido a GreenSky',
+            description: 'Somos los encargados de ponerle vida a los lugares donde vives y transitas.',
+            image: 'assets/img/plants.png',
           },
           {
-            title: values.TUTORIAL_SLIDE2_TITLE,
-            description: values.TUTORIAL_SLIDE2_DESCRIPTION,
-            image: 'assets/img/ica-slidebox-img-2.png',
+            title: 'Tecnología Sustentable',
+            description: 'Un desarrollo sustentable que lleva de la mano el paisaje urbano al rural y cambia la manera de ver nuestros hogares y edificios.',
+            image: 'assets/img/solar-panel-icon.png',
           },
           {
-            title: values.TUTORIAL_SLIDE3_TITLE,
-            description: values.TUTORIAL_SLIDE3_DESCRIPTION,
-            image: 'assets/img/ica-slidebox-img-3.png',
+            title: 'Portafolio de Plantas a tu alcance',
+            description: 'Tenemos una base de datos de la que puedes escoger las que más te gusten para armar tus módulos.',
+            image: 'assets/img/hoya.jpg',
           }
         ];
       });

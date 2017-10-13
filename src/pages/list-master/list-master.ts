@@ -4,6 +4,8 @@ import { IonicPage, ModalController, NavController } from 'ionic-angular';
 import { Item } from '../../models/item';
 import { Items } from '../../providers/providers';
 
+import { Http } from '@angular/http';
+
 @IonicPage()
 @Component({
   selector: 'page-list-master',
@@ -11,16 +13,33 @@ import { Items } from '../../providers/providers';
 })
 export class ListMasterPage {
   currentItems: Item[];
+  public items2 : any = [];
 
-  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController) {
-    this.currentItems = this.items.query();
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController, public http: Http) {
+    //this.currentItems = this.items.query();
+    //public items: Items;
   }
 
   /**
    * The view loaded, let's query our items for the list
    */
   ionViewDidLoad() {
+
+    this.load();
   }
+
+  // Retrieve the JSON encoded data from the remote server
+   // Using Angular's Http class and an Observable - then
+   // assign this to the items array for rendering to the HTML template
+   load()
+   {
+      this.http.get('http://localhost/greensky.com/retrieve-data.php')
+      .map(res => res.json())
+      .subscribe(data => 
+      {
+         this.items2 = data;         
+      });
+   }
 
   /**
    * Prompt the user to add a new item. This shows our ItemCreatePage in a
