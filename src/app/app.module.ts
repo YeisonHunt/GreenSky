@@ -15,6 +15,7 @@ import { Settings } from '../providers/providers';
 import { User } from '../providers/providers';
 import { Api } from '../providers/providers';
 import { MyApp } from './app.component';
+import { PlantasListProvider } from '../providers/plantas-list/plantas-list';
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -39,7 +40,8 @@ export function provideSettings(storage: Storage) {
 
 @NgModule({
   declarations: [
-    MyApp
+    MyApp,
+  
   ],
   imports: [
     BrowserModule,
@@ -56,7 +58,8 @@ export function provideSettings(storage: Storage) {
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp
+    MyApp,
+
   ],
   providers: [
     Api,
@@ -68,7 +71,8 @@ export function provideSettings(storage: Storage) {
     StatusBar,
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },
     // Keep this to enable Ionic's runtime error handling during development
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    PlantasListProvider,
   ]
 })
 export class AppModule { }

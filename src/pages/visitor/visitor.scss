@@ -1,0 +1,31 @@
+page-visitor {
+    .visitor-bg{
+        background-image: url("../../assets/img/perfil_bg.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .visitor-title{
+        font-family: Pacifico;
+        color: #0f6b2d;
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .title{
+        font-family: Pacifico;
+        
+    }
+
+    .p{
+        padding: 0 40px;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #60646B;
+    }
+
+    .marco{
+        background: rgb(92, 73, 11);
+    }
+}

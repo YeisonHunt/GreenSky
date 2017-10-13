@@ -1,0 +1,51 @@
+
+<ion-header>
+  <ion-navbar color="secondary">
+      <ion-buttons left>
+        <button ion-button icon-only (click)="goBack()" class="my-style-for-modal"> 
+          <ion-icon name="arrow-back"></ion-icon> 
+        </button> 
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="visitor-bg">
+  <ion-row>
+    <ion-col>
+        <h1 class="visitor-title">¡Mira la variedad de plantas que tenemos para ti!</h1>
+        <br>
+        <ion-card *ngFor="let p of plantas">
+            <img src="{{p.imagen}}" alt="">
+            <ion-card-title class="title">{{p.nombre}}</ion-card-title>
+            <ion-card-content>{{p.descripcion}}</ion-card-content>
+        </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <p class="p">Todas ellas son puestas en jardines verticales, justo como éste: </p>
+    <div class="marco">
+      <ion-card>
+      <img src="http://www.alicanteforestal.es/wp-content/uploads/2016/09/IMG_20160913_144732.jpg" alt="">
+      </ion-card>
+    </div>
+    <br>
+    <p class="p">Puedes escoger la que quieras, y según sus propiedades la instalaremos para tí </p>
+    <p class="p">Busca más plantas aquí: </p>
+  </ion-row>
+  <ion-row>
+    <ion-searchbar (ionInput)="getItems($event)" placeholder="Buscar" color="primary"></ion-searchbar>
+      <ion-list>
+        <button ion-item (click)="openItem(item)" *ngFor="let item of currentItems">
+          <ion-avatar item-start>
+            <img [src]="item.profilePic" />
+          </ion-avatar>
+          <h2>{{item.name}}</h2>
+          <p>{{item.about}}</p>
+          <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
+        </button>
+      </ion-list>
+  </ion-row>
+  
+
+</ion-content>

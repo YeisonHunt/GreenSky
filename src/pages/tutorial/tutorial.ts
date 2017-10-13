@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, MenuController, NavController, Platform } from 'ionic-angular';
 
 import { TranslateService } from '@ngx-translate/core';
+import {VisitorPage} from '../visitor/visitor';
 
 export interface Slide {
   title: string;
@@ -69,6 +70,10 @@ export class TutorialPage {
   ionViewWillLeave() {
     // enable the root left menu when leaving the tutorial page
     this.menu.enable(true);
+  }
+
+  goToCatalogo(){
+    this.navCtrl.push("VisitorPage");
   }
 
 }

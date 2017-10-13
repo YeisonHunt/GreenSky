@@ -5,6 +5,7 @@ import { Item } from '../../models/item';
 import { Items } from '../../providers/providers';
 
 import { Http } from '@angular/http';
+import {TutorialPage} from '../tutorial/tutorial';
 
 @IonicPage()
 @Component({
@@ -41,10 +42,15 @@ export class ListMasterPage {
       });
    }
 
+   goToFirstPage(){
+     this.navCtrl.parent.parent.setRoot("TutorialPage");
+   }
+
   /**
    * Prompt the user to add a new item. This shows our ItemCreatePage in a
    * modal and then adds the new item to our data source if the user created one.
    */
+  /*
   addItem() {
     let addModal = this.modalCtrl.create('ItemCreatePage');
     addModal.onDidDismiss(item => {
@@ -58,6 +64,7 @@ export class ListMasterPage {
   /**
    * Delete an item from the list of items.
    */
+  /*
   deleteItem(item) {
     this.items.delete(item);
   }
@@ -65,9 +72,11 @@ export class ListMasterPage {
   /**
    * Navigate to the detail page for this item.
    */
+  /*
   openItem(item: Item) {
     this.navCtrl.push('ItemDetailPage', {
       item: item
     });
   }
+  */
 }
